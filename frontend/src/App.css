@@ -1,0 +1,177 @@
+* {
+  border: 0;
+  outline: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  animation: animate-header 0.4s linear;
+}
+
+.App-link {
+  color: #61dafb;
+}
+button {
+  width: 8rem;
+  height: 30px;
+  margin: 5px;
+  background-color: rgb(255, 119, 0);
+
+  animation: button-growth-out both 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  animation: button-growth-in both 0.3s ease-in-out;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  margin: 5px;
+
+  text-align: center;
+
+  border-radius: 5px;
+}
+
+.choose_contract {
+  width: 600px;
+  padding: 5%;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: darkslateblue;
+  /* animation: animate 0.4s linear; */
+
+  animation: choose-contract 0.8s ease-in-out;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: main 1s linear;
+}
+
+.main span {
+  color: tomato;
+  font-size: small;
+
+  line-height: 15px;
+}
+
+.main h6 {
+  color: springgreen;
+  font-size: small;
+
+  line-height: 15px;
+  animation: success-message-in 0.9s linear;
+}
+
+@keyframes success-message-in {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes animate-header {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+    left: 500px;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes choose-contract {
+  0% {
+    opacity: 0;
+    left: 1000px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes button-growth-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes button-growth-out {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
